@@ -1,0 +1,13 @@
+<div class="content-section">
+    <form action="login"  method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="UserName"><br>
+        <input type="password" name="password1" placeholder="Password"><br>
+        <input type="submit" >
+    </form>
+    <div>
+        {% for message in messages %}
+            {{message}}
+        {% endfor %}
+    </div>
+</div>
